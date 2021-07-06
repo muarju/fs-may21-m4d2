@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import MyNavBar from './components/MyNavBar'
+import MyFooter from './components/MyFooter'
+import Welcome  from './components/Welcome'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {/* this is a react fragment, just a wrapper because every component
+    MUST return a single JSX element */}
+      <MyNavBar />
+      <Welcome title="Strive Book Shop" subtitle="Welcome to Strive Book Shop" />
+      <MyFooter />
+    </>
+  )
 }
 
-export default App;
+export default App
